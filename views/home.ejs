@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        </head>
+        <body>
+            <h1>Contact List</h1>
+            <div>
+                <ul>
+                    <%  for(let i of contact_list){        %>
+                        <li>
+                           <p> <%= i.name %></p>
+                           <p> <%= i.phone %></p>
+                           <p><%= i.email %></p>
+                            
+                        </li>
+
+                        <%}%>
+                </ul>
+            </div>
+            <form action="/action" method="post">
+                <input type="text" name="name" placeholder="name" required>
+                <input type="text" name="phone" placeholder="phone" required>
+                <input type="text" name="email" placeholder="email" required>
+                <button type="submit">Add  Contact</button>
+               </form>
+        </body>
+    
+</html>
